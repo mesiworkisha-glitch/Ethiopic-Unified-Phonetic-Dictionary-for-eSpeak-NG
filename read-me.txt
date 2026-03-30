@@ -1,0 +1,64 @@
+Project Name,Ethiopic Unified Phonetic Dictionary (Gold Master)
+Author,Meseret Worku Alemu
+Current Version,1.0.0
+Dictionary Size,"1,434 Phonetic Entries"
+Binary Size,60 KB (am_dict)
+License,GPL v3 (Code) / CC BY-SA 4.0 (Docs)
+
+Ethiopic Unified Phonetic Dictionary (EUPD)
+Author: Meseret Worku Alemu
+Version: 1.0 (The 60 KB Gold Master)
+Overview
+This project represents a massive expansion of the eSpeak-NG Amharic capabilities, moving beyond basic support to a comprehensive, multi-language phonetic engine. It is designed to handle the complex nuances of the Ge'ez script across various Ethiopian and Eritrean languages.
+Advanced Features
+• 
+Homophone Differentiation: Expertly maps traditionally distinct characters (like ሀ, ሐ, ኀ or ሠ, ሰ) to ensure proper phonetic context despite modern pronunciation overlaps.
+• 
+Traditional Punctuation: Full support for the complete Ge'ez punctuation set, including the word separator (፡), sentence ender (።), and complex marks like the preface (፠) and paragraph separator (፼).
+• 
+Yaredic (Zema) Signs: Integration of the musical and liturgical notation used in the Ethiopian Orthodox Tewahedo Church, ensuring these signs are recognized during text processing.
+• 
+Regional Exclusives:
+• 
+Bilen: Labialized velar nasal series (ⶓ).
+• 
+Sebat Bet Gurage: Palatalized series (ⶨ, ⶰ) and the heavy alveolar stop (ዸ).
+• 
+Tigrigna: Support for the ቐ and ጘ families.
+• 
+Numeral System: Full conversion of Ge'ez numerals from ፩ through ፼.
+Technical Specifications
+• 
+Total Dictionary Entries: 1,446 entries in am_list.
+• 
+Rule Density: 11 synchronized groups in am_rules.
+• 
+Binary Size: Optimized to 60 KB for high-performance text-to-speech.
+
+Linguistic Implementation Details
+1. Homophone Differentiation & Heritage Spelling
+While modern Amharic often pronounces different "S" and "H" characters identically, this Gold Master maintains their traditional phonetic identity for historical and liturgical accuracy:
+• 
+The "H" Series: Differentiates between ሀ (U+1200), ሐ (U+1228), and ኀ (U+1280).
+• 
+The "S" Series: Properly maps ሠ (U+1220) and ሰ (U+1238) to ensure scripts that rely on these distinctions are rendered correctly by the speech engine.
+• 
+The "T's" Series: Distinguishes between ጸ (U+1348) and ፀ (U+1350).
+2. Traditional Ge'ez Punctuation
+The am_rules file has been optimized to handle the rhythmic pauses required by traditional Ethiopic text:
+• 
+፡ (Semicolon/Word Space): Handled as a brief breath or separator.
+• 
+። (Full Stop): Implements a complete falling intonation for sentence termination.
+• 
+፣ (Comma) and ፤ (Semicolon): Tuned for natural phrasing in long-form Ge'ez documents.
+3. Yaredic (Zema) & Liturgical Signs
+Unique to this implementation is the support for Yaredic signs, which are essential for ecclesiastical Ethiopian texts:
+• 
+Musical Notation: Allows the engine to recognize and process the symbols used in the Zema (chant) tradition of the Ethiopian Orthodox Tewahedo Church.
+• 
+Scriptural Accuracy: Ensures that  religious or historical documents are processed without phonetic errors.
+
+Compilation
+Ensure your ph_am, am_list, and am_rules files are in the same directory, then run:
+espeak-ng --compile=am
