@@ -1,6 +1,6 @@
-Author Meseret Worku Alemu
+// Author Meseret Worku Alemu
 //====================================================
-//  Amharic (Ethiopia)
+//  Unified Ethiopic Phonetic Dictionary Phonemes Definitions
 //====================================================
 
 
@@ -20,7 +20,7 @@ endphoneme
 phoneme y
   vwl starttype #@ endtype #@
   ipa ɨ
-  length 180
+  length 100
 
   // assume that word-final [y] are not added by am_rules
   // Only allow [y] in first or last syllables
@@ -135,106 +135,424 @@ phoneme x
     CALL base1/x
   ENDIF
 endphoneme
-//====================================================
-// New Consonants for Dictionary & Exclusive Fidels
-//====================================================
 
-phoneme s
-  vls alv frc
-  length 150
-  FMT(fric/s_3)
-endphoneme
-
-phoneme n
-  vcd alv nsl
+phoneme qh
+  vls vel frc
   length 140
-  FMT(nasal/n_2)
+  FMT(fric/x_1)
 endphoneme
 
-phoneme m
-  vcd blb nsl
+phoneme gn
+  vcd vel nsl
   length 140
-  FMT(nasal/m_2)
+  FMT(nasal/n_1)
 endphoneme
 
-phoneme h
-  vls glt frc
-  length 140
-  FMT(fric/h_2)
-endphoneme
-
-phoneme z
-  vcd alv frc
-  length 150
-  FMT(fric/z_2)
-endphoneme
-
-// Gurage Exclusive: Voiced Alveolar Stop (Heavy)
-phoneme dd
+phoneme D
   vcd alv stp
   length 160
-  CALL base1/d
+  FMT(stp/d_1)
 endphoneme
 
-// Tigrigna Exclusive: Velar Nasal
 phoneme N
   vcd vel nsl
   length 140
   FMT(nasal/ng_1)
 endphoneme
 
-//====================================================
-// Ejective Aliases for am_list Compatibility
-//====================================================
-
-phoneme p'
-  CALL p`
-endphoneme
-
-phoneme t'
-  CALL t`
-endphoneme
-
-phoneme ch'
-  CALL tS`
-endphoneme
-
-phoneme k'
-  CALL k`
-endphoneme
-
-phoneme q_h
+phoneme qqh
   vls vel frc
-  length 160
-  FMT(fric/x_2)
+  length 240
+  FMT(fric/x_1)
 endphoneme
 
-phoneme dh
+phoneme ggn
+  vcd vel nsl
+  length 240
+  FMT(nasal/n_1)
+endphoneme
+
+phoneme mmw
+  vcd blb nsl
+  length 240
+  FMT(nasal/m_1)
+endphoneme
+
+phoneme kw
+  vls vel stp
+  length 140
+  FMT(stp/k_1)
+endphoneme
+
+phoneme mw
+  vcd blb nsl
+  length 140
+  FMT(nasal/m_1)
+endphoneme
+
+phoneme lw
+  vcd alv lqd
+  length 120
+  FMT(l/1)
+endphoneme
+
+phoneme qqh
+  vls vel frc
+  length 240
+  FMT(fric/x_1)
+endphoneme
+
+phoneme ggn
+  vcd vel nsl
+  length 240
+  FMT(nasal/n_1)
+endphoneme
+
+phoneme mmw
+  vcd blb nsl
+  length 240
+  FMT(nasal/m_1)
+endphoneme
+
+phoneme kw
+  vls vel stp
+  length 140
+  FMT(stp/k_1)
+endphoneme
+
+phoneme mw
+  vcd blb nsl
+  length 140
+  FMT(nasal/m_1)
+endphoneme
+
+phoneme lw
+  vcd alv lqd
+  length 120
+  FMT(l/1)
+endphoneme
+
+phoneme ?
+  vls glt stp
+  length 60
+  FMT(stp/p_1)
+endphoneme
+
+phoneme '
+  import_phoneme base1/'
+endphoneme
+
+// Ejective-Labialized (for ጧ, ጯ)
+phoneme t'w
+  vls alv stp
+  length 160
+  WAV(ustop/t_hi, 70)
+endphoneme
+
+phoneme tS'w
+  vls pla afr sib
+  length 160
+  WAV(ustop/tsh_unasp, 80)
+endphoneme
+
+// Velar Nasal (for the 'ng' sounds in some of your dictionary strings)
+phoneme N
+  vcd vel nsl
+  length 140
+  FMT(nasal/ng_1)
+endphoneme
+
+phoneme J
+  vcd pal stp
+  length 130
+  // Reduced FMT values to remove the "English breathiness"
+  Vowelin  f1=0  f2=1900 -100  f3=-200 80
+  Vowelout f1=0  f2=2100 -400  f3=-200 80 rms=22
+  // Use a shorter, unasp (unaspirated) wave file for a sharp "click"
+  WAV(ustop/j_unasp, 40) 
+endphoneme
+
+phoneme D
   vcd alv stp
   length 140
-  WAV(ustop/d_1, 70)
+  WAV(ustop/d_1, 40) // Reduced WAV length for a sharper "D"
 endphoneme
 
-phoneme g_n
-  vcd vel nsl
-  length 150
-  FMT(nasal/n_3)
+phoneme kky
+  vls vel stp
+  length 260
+  WAV(ustop/k_unasp, 100)
 endphoneme
 
-phoneme g_n_w
-  vcd vel nsl lab
-  length 160
-  FMT(nasal/n_3)
+phoneme mmw
+  vcd blb nsl
+  length 250
+  FMT(nasal/m_1)
 endphoneme
 
-phoneme k_y
-  vls vel stp pal
+phoneme rrw
+  vcd alv lqd
+  length 240
+  import_phoneme base1/R2
+endphoneme
+
+phoneme bbw
+  vcd blb stp
+  length 260
+  WAV(ustop/b_1, 90)
+endphoneme
+
+phoneme chch
+  vls pal afr
+  length 260
+  WAV(ustop/tsh_unasp, 110)
+endphoneme
+
+phoneme ffw
+  vls lbd frc
+  length 250
+  FMT(fric/f_1)
+endphoneme
+
+phoneme mw
+  vcd blb nsl
   length 140
-  WAV(ustop/k_unasp, 60)
+  FMT(nasal/m_1)
 endphoneme
 
-phoneme n_y
-  vcd alv nsl pal
+phoneme rw
+  vcd alv lqd
+  length 130
+  import_phoneme base1/R2
+endphoneme
+
+phoneme bw
+  vcd blb stp
+  length 140
+  WAV(ustop/b_1, 50)
+endphoneme
+
+phoneme qhw
+  vls vel frc
   length 150
-  FMT(nasal/n_2)
+  FMT(fric/x_1)
+endphoneme
+
+phoneme fw
+  vls lbd frc
+  length 140
+  FMT(fric/f_1)
+endphoneme
+
+phoneme n^
+  vcd pal nsl
+  length 140
+  FMT(nasal/n_1)
+endphoneme
+
+phoneme n^wa
+  vcd pal nsl
+  length 150
+  FMT(nasal/n_1)
+endphoneme
+
+phoneme pw
+  vls blb stp
+  length 140
+  WAV(ustop/p_unasp, 50)
+endphoneme
+
+phoneme tqwa  // For ጧ
+  vls alv stp
+  length 160
+  WAV(ustop/t_hi, 80)
+endphoneme
+
+phoneme tSqwa // For ጯ
+  vls pla afr sib
+  length 160
+  WAV(ustop/tsh_unasp, 90)
+endphoneme
+
+phoneme tsqwa // For ጿ
+  vls alv frc
+  length 150
+  FMT(fric/s_2)
+endphoneme
+
+phoneme ppw
+  vls blb stp
+  length 260
+  WAV(ustop/p_unasp, 110)
+endphoneme
+
+phoneme tsqtsq // For double ጽ/ፅ
+  vls alv frc
+  length 250
+  FMT(fric/s_2)
+endphoneme
+
+phoneme ssw // For double ሷ/ሧ
+  vls alv frc
+  length 240
+  FMT(fric/s_2)
+endphoneme
+
+phoneme zzwa // For double ዟ
+  vcd alv frc
+  length 240
+  FMT(fric/z_1)
+endphoneme
+
+phoneme p_bare
+  vls blb stp
+  length 40
+  WAV(ustop/p_unasp, 20)
+endphoneme
+
+phoneme J_bare
+  vcd pal stp
+  length 40
+  WAV(ustop/j_unasp, 20)
+endphoneme
+
+phoneme tS`
+  vls pal afr sib
+  length 160
+  // Sharp ejective attack
+  Vowelin  f1=0  f2=2200 -100  f3=-300 80
+  Vowelout f1=0  f2=2400 -500  f3=-300 80 rms=35
+  WAV(ustop/tsh_unasp, 60) 
+endphoneme
+
+phoneme ቨ  // Often labeled as 'v' in eSpeak logic
+  vcd lbd frc
+  length 150
+  FMT(fric/v_1)
+endphoneme
+
+phoneme tsq  // For ጸ and ፀ
+  vls alv frc
+  length 150
+  FMT(fric/s_2)
+endphoneme
+
+phoneme tsq` // For ጽ/ፅ ejective
+  vls alv frc
+  length 160
+  FMT(fric/s_2)
+endphoneme
+
+phoneme tsqwa
+  vls alv frc
+  length 150
+  FMT(fric/s_2)
+endphoneme
+
+phoneme Jwa
+  vcd pal stp
+  length 140
+  FMT(stp/g_1)
+endphoneme
+
+phoneme vwa  // For ቯ
+  vcd lbd frc
+  length 150
+  FMT(fric/v_1)
+endphoneme
+
+phoneme vvv  // For double ቨ
+  vcd lbd frc
+  length 250
+  FMT(fric/v_1)
+endphoneme
+
+phoneme ts`ts` // For double ጸ/ፀ
+  vls alv frc
+  length 250
+  FMT(fric/s_2)
+endphoneme
+
+phoneme JJJ // For double ጀ
+  vcd pal stp
+  length 260
+  WAV(ustop/j_unasp, 110)
+endphoneme
+
+phoneme n^
+  vcd pal nsl
+  length 140
+  FMT(nasal/n_1)
+endphoneme
+
+phoneme n^y  // Specifically for the 6th form ኝ
+  vcd pal nsl
+  length 100
+  FMT(nasal/n_1)
+endphoneme
+
+phoneme n^wa
+  vcd pal nsl
+  length 150
+  FMT(nasal/n_1)
+endphoneme
+
+phoneme ggn^ // For double ኘ
+  vcd pal nsl
+  length 250
+  FMT(nasal/n_1)
+endphoneme
+
+phoneme hwy
+  vls vel frc
+  length 150
+  // Combine the 'h' friction with a labialized resonance
+  FMT(fric/x_1) 
+  Vowelin  f1=0  f2=800  f3=-200
+  Vowelout f1=0  f2=700  f3=-200 rms=18
+endphoneme
+
+phoneme ng
+  vcd vel nsl
+  length 140
+  FMT(nasal/ng_1)
+endphoneme
+
+phoneme arafa
+  vcd glt stp
+  length 140
+  FMT(stp/p_1)
+endphoneme
+
+phoneme netela
+  vcd alv nsl
+  length 140
+  FMT(nasal/n_1)
+endphoneme
+
+phoneme dirib
+  vcd alv stp
+  length 140
+  FMT(stp/d_1)
+endphoneme
+
+phoneme arat_netib
+  vcd glt stp
+  length 140
+  FMT(stp/p_1)
+  // This points to the "Four Dots" name
+endphoneme
+
+phoneme tiyaqe_mlkt
+  vls alv stp
+  length 130
+  WAV(ustop/t_unasp, 50)
+  // This describes the Ethiopic Question Mark
+endphoneme
+
+phoneme paraklitos
+  vls blb stp
+  length 140
+  WAV(ustop/p_unasp, 50)
+  // This identifies the Holy Spirit/Consecration mark
 endphoneme

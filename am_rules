@@ -1,19 +1,126 @@
-Author Meseret Worku Alemu
-// Spelling-to-phoneme rules for Amharic
+// Author Meseret Worku 
+// Unified Ethiopic phonetic dictionary rules
 // This file is UTF-8 encoded
+// all words lower case
+
+፠	arafa
+፡	and
+።	n@t`yb
+፣	netela
+፤	dirib
+
+// Traditional Punctuation & Liturgical Marks
+።	arat_netib
+፧	tiyaqe_mlkt
+፟	paraklitos
+
+.YaredicMusicalSigns
+᎐	jiz@t
+᎑	d@r@t
+᎒	rykryk
+᎔	dyfat
+᎕	k`ynat
+᎖	tS`yr@t
+᎗	hid@t
+᎙	k`urt`
 
 .group
-    _
-    __
-    ___
+	ሀ	haletaw
+	ሐ	hameru
+	ኀ	byzuhanu
+	ሠ	nygusu
+	ሰ	esatu
+	ጸ	sehayu
+	ፀ	selotu
+	ዐ	aynu
+	አ	alefaw
 
-// 1. TRADITIONAL PUNCTUATION & SYMBOLS
-.group
-    ፠    ar af a
-    ፡    an d
-    ።    ar at
-    ፣    n et el a
-    ፤    d ir ib
+// Tigrigna qh Series (Top of file)
+_ቐ	qh@
+___ቐ	qqh@
+_ቕ	qhy
+@) _ቕ (_ qh
+
+// Numbers from Gold Master am_list
+_0	z'ero
+_1	'?and
+_2	h'ul@t
+_3	s'ost
+_4	'?arat
+_5	'?ammyst
+_6	s'yd:yst
+_7	s'@bat
+_8	s'ymynt
+_9	z'@t`@n^
+_10	'?assyr
+_12     '?asra'ul@t
+_1X	?asr'a
+_2X	haja
+_3X	sal'asa
+_4X	?arba
+_5X	hamsa
+_6X	silsa
+_7X	s@ba
+_8X	s@m'anja
+_9X	z@t`'@na
+_0C	m'@to
+_0M1	S'ix
+_0M2    m'ilon
+_0M3    b'ilon
+
+// Forced Gemination Rules
+_ዸ	D@
+___ዸ	DD@  // Assuming DD is defined as a long D
+
+_ጇ	Jwa
+___ጇ	JJwa // Assuming JJwa is defined as a long Jwa
+
+// Gemination and Special Extensions from Am_List
+_ቐ	qh@
+___ቐ	qqh@
+_ቑ	qhu
+___ቑ	qqhu
+_ቒ	qhi
+___ቒ	qqhi
+_ቓ	qha
+___ቓ	qqha
+_ቔ	qhe
+___ቔ	qqhe
+_ቕ	qhy
+___ቕ	qqhy
+_ቖ	qho
+___	qqho
+
+ⶓ	gn@
+ⶓ	ggn@
+ⶔ	gnu
+ⶔ	ggnu
+ⶕ	gni
+ⶕ	ggni
+ⶖ	gna
+ⶖ	ggna
+⶗	gne
+⶗	ggne
+⶘	gny
+⶘	ggny
+⶙	gno
+⶙	ggno
+
+ጘ	ng@
+	ጙ	ngu
+	ጚ	ngi
+	ጛ	nga
+	ጜ	nge
+	ጝ	ngy
+     @) ጝ (_	ng
+	ጞ	ngo
+
+.Group 0xe188 (near መ):
+_ⶀ	mw@
+___ⶀ	mmw@
+_ⶁ	mwu
+___ⶁ	mmwu
+
 
 .group 0xe188		// characters U+1200 to U+123f
 	ሀ	ha
@@ -24,7 +131,7 @@ Author Meseret Worku Alemu
 	ህ	hy
      @) ህ (_	x
 	ሆ	ho
-	
+
 	ለ	l@
 	ሉ	lu
 	ሊ	li
@@ -95,8 +202,11 @@ Author Meseret Worku Alemu
 	ሾ	So
 	ሿ	Swa
 
+
+
+
 .group 0xe189		// U+1240 to U+127F
-	ቀ	k`@
+	ቀ	k`@	// U+1240
 	ቁ	k`u
 	ቂ	k`i
 	ቃ	k`a
@@ -111,6 +221,9 @@ Author Meseret Worku Alemu
 	ቌ	k`we
 	ቍ	k`wy
      @) ቍ (_	k`w
+
+
+
 
 	በ	b@
 	ቡ	bu
@@ -152,6 +265,8 @@ Author Meseret Worku Alemu
 	ቾ	tSo
 	ቿ	tSwa
 
+
+
 .group 0xe18a		// U+1280 to U+12B7
 	ኀ	ha
 	ኁ	hu
@@ -167,7 +282,7 @@ Author Meseret Worku Alemu
 	ኋ	hwa
 	ኌ	hwe
 	ኍ	hwy
-     @) ኍ (_	hw
+     @) ኍ (_hw
 
 	ነ	n@
 	ኑ	nu
@@ -189,7 +304,7 @@ Author Meseret Worku Alemu
 	ኞ	n^o
 	ኟ	n^wa
 
-	አ	?a
+	አ	?a   // U+12A0
 	ኡ	?u
 	ኢ	?i
 	ኣ	?a
@@ -198,7 +313,7 @@ Author Meseret Worku Alemu
 	ኦ	?o
 	ኧ	?@
 
-	ከ	k@
+	ከ	k@	// U+12A8
 	ኩ	ku
 	ኪ	ki
 	ካ	ka
@@ -206,7 +321,7 @@ Author Meseret Worku Alemu
 	ክ	ky
      @) ክ (_	k
 	ኮ	ko
-	
+
 	ኰ	kw@
 	ኲ	kwi
 	ኳ	kwa
@@ -223,7 +338,9 @@ Author Meseret Worku Alemu
      @) ኽ (_	x
 	ኾ	ho
 
+
 .group 0xe18b		// U+12C0 to U+12FF
+
 	ዀ	hw@
 	ዂ	hwi
 	ዃ	hwa
@@ -286,26 +403,28 @@ Author Meseret Worku Alemu
      @) ድ (_	d
 	ዶ	do
 	ዷ	dwa
-	ዸ	dh@
-	ዹ	dhu
-	ዺ	dhi
-	ዻ	dha
-	ዼ	dhe
-	ዽ	dhy
-     @) ዽ (_	dh
-	ዾ	dho
-	ዿ	dhwa
+
+	ዸ	D@   
+	ዹ	Du
+	ዺ	Di
+	ዻ	Da
+	ዼ	De
+	ዽ	Dy
+     @) ዽ (_D
+	ዾ	Do
+	ዿ	Dwa
+
 
 .group 0xe18c		// U+1300 to U+133F
-	ጀ	dZ@
-	ጁ	dZu
-	ጂ	dZi
-	ጃ	dZa
-	ጄ	dZe
-	ጅ	dZy
-     @) ጅ (_	dZ
-	ጆ	dZo
-	ጇ	dZwa
+	ጀ	J@
+	ጁ	Ju
+	ጂ	Ji
+	ጃ	Ja
+	ጄ	Je
+	ጅ	Jy
+     @) ጅ (_J
+	ጆ	Jo
+	ጇ	Jwa
 
 	ገ	g@
 	ጉ	gu
@@ -329,7 +448,7 @@ Author Meseret Worku Alemu
 	ጛ	Na
 	ጜ	Ne
 	ጝ	Ny
-    @) ጝ (_	N
+     @) ጝ (_N
 	ጞ	No
 
 	ጠ	t`@
@@ -393,7 +512,7 @@ Author Meseret Worku Alemu
 	ፎ	fo
 	ፏ	fwa
 
-	ፐ	p@
+	ፐ	p@	// U+1350
 	ፑ	pu
 	ፒ	pi
 	ፓ	pa
@@ -407,38 +526,6 @@ Author Meseret Worku Alemu
 	ፙ	mj@
 	ፚ	fj@
 
-// 2. GEEZ NUMERALS
-.group 0xe18d
-    ፩    and
-    ፪    h u l y t
-    ፫    s o s t
-    ፬    a r a t
-    ፭    a m m y s t
-    ፮    s y d y s t
-    ፯    s y b a t
-    ፰    s y m y n t
-    ፱    z y t y n
-    ፲    a s s y r
-    ፳    h a j a
-    ፴    s e l a s a
-    ፵    a r b a
-    ፶    h a m s a
-    ፷    s y d s a
-    ፸    s e b a
-    ፹    s e m a n i j a
-    ፺    z e t e n a
-    ፻    m a t o
-    ፼    a s s y r  e s r a  s h i
-
-// 3. REGIONAL EXCLUSIVES (Bilen & Sebat Bet Gurage)
-// Using .group without a hex code to allow mixed extended ranges
-.group
-	ⶓ	g_n_w_a
-     @) ⶘ (_	g_n_w
-	ⶨ	k_y_a
-     @) ⶭ (_	k_y
-	ⶰ	n_y_a
-     @) ⶵ (_	n_y
-
 .group
 	$	dolar
+
