@@ -104,6 +104,22 @@ phoneme t`
 endphoneme
 
 
+phoneme dZ
+  vcd pla afr
+  length 140
+  // The 'd' part of the affricate
+  Vowelin  f1=0  f2=1800 -100  f3=-200 80
+  Vowelout f1=0  f2=2100 -400  f3=-200 80 rms=22
+  // The 'Z' friction part
+  WAV(ustop/dZ_unasp, 45)
+endphoneme
+
+phoneme dZy
+  vcd pla afr
+  length 100
+  WAV(ustop/dZ_unasp, 30)
+endphoneme
+
 phoneme tS`
   vls pla afr sib
   voicingswitch dZ
@@ -555,4 +571,105 @@ phoneme paraklitos
   length 140
   WAV(ustop/p_unasp, 50)
   // This identifies the Holy Spirit/Consecration mark
+endphoneme
+
+// --- Ethiopic Punctuation ---
+
+phoneme ።  // Ethiopic Full Stop
+  vowel n/a
+  length 300  // Longer pause for end of sentence
+  pause
+end phoneme
+
+phoneme ፣  // Ethiopic Comma
+  vowel n/a
+  length 150
+  pause
+end phoneme
+
+phoneme ፤  // Ethiopic Semicolon
+  vowel n/a
+  length 200
+  pause
+end phoneme
+
+phoneme ፦  // Ethiopic Preface (Colon)
+  vowel n/a
+  length 100
+end phoneme
+
+// --- Standard/Western Punctuation ---
+
+phoneme .  // Period
+  vowel n/a
+  length 300
+  pause
+end phoneme
+
+phoneme ,  // Comma
+  vowel n/a
+  length 150
+  pause
+end phoneme
+
+phoneme /  // Slash (Critical for your abbreviations)
+  vowel n/a
+  length 30    // Very short, almost no pause
+end phoneme
+
+phoneme (  // Left Parenthesis
+  vowel n/a
+  pause
+end phoneme
+
+phoneme )  // Right Parenthesis
+  vowel n/a
+  pause
+end phoneme
+
+phoneme ?  // Question Mark
+  vowel n/a
+  length 300
+  pause
+  pitch 20    // Slight rise in pitch for questions
+end phoneme
+
+// Base Palatalized K (Single)
+phoneme k'
+  vcl stop
+  liquid
+  source  k/k_soft
+  length  140
+  output  k j
+endphoneme
+
+// Geminated Palatalized K (Double/Strong)
+phoneme kk'
+  vcl stop
+  liquid
+  source  k/k_hard
+  length  220  // Increased length for gemination
+  pause   40   // Slight tension/hold before release
+  output  k j
+endphoneme
+
+// Left Double Angle Quote « (kafet_t'ykys)
+phoneme «
+  type  punctuation
+  pause 120    // Pre-speech pause
+  intonation boundary
+endphoneme
+
+// Right Double Angle Quote » (zy_g_t'ykys)
+phoneme »
+  type  punctuation
+  pause 80     // Brief post-speech pause
+  intonation fall
+endphoneme
+
+// Inverted Exclamation ¡ (tymyr_t@_sy_laq)
+phoneme ¡
+  type  punctuation
+  intonation raise // Sarcasm/Irony often uses a rising pitch
+  pause 40
 endphoneme

@@ -1,22 +1,18 @@
 
 //  Meseret Worku Alemu v2026 Gold Master
+//  Amharic Dictionary Source
+//  UTF-8 encoded
+
 ፠	arafa
 ፡	and
 ።	arat
 ፣	netela
 ፤	dirib
-ሀ	haletaw
-ሐ	hameru
-ኀ	hyxtu
-ሠ	nygusu
-ሰ	esatu
-ጸ	sehayu
-ፀ	selotu
-ዐ	aynu
-አ	alefaw
+// Modern Literary Punctuation
+«	kyfyt_t`yk`ys
+»	zyg_t`yk`s
+¡	ty'ymyrt@_sylak`
 
-//  Amharic Dictionar Source
-//  UTF-8 encoded
 
 //  2. REGULAR NUMBERS
 _0	z'ero   b'ado ??
@@ -1105,12 +1101,11 @@ _0M3    b'ilon
 ፰፼	s@manjaSih
 ፱፼	z@t`@naSih
 ፲፼	m@toSih
-፼፼	milyon
-፼፼፼	bilyon
+፼፼	milijon
+፼፼፼	bilijon
 ====================================================
 ፻፻	asyrSih
 ፪፻፻	hajaSih
-፫፻፻	s@lasaSih
 ፬፻፻	arbaSih
 ፭፻፻	hamsaSih
 ፮፻፻	sydsaSih
@@ -1119,8 +1114,8 @@ _0M3    b'ilon
 ፱፻፻	z@t`@naSih
 ፲፻፻	m@toSih
 
-፻፻፻፻	miliyon
-፻፻፻፻፻፻	biliyon
+፻፻፻፻	milijon
+፻፻፻፻፻፻	bilijon
 
 // 4. PUNCTUATION
 ፣	n@t`@las@r@z
@@ -1132,7 +1127,7 @@ _0M3    b'ilon
 ፥	amystn@t`yb
 ፦	n@g@rnyy@n
 ፧	m@lkyt
-፨	paraqltos
+፨	parak`litos
 ፠	elthe
 
 //  5. FIDEL FAMILIES
@@ -1309,12 +1304,12 @@ _0M3    b'ilon
 ዴ	de
 ድ	dy
 ዶ	do
-ጀ	J@
-ጁ	Ju
-ጂ	Ji
-ጃ	Ja
-ጄ	Je
-ጅ	Jy
+ጀ	dZ@
+ጁ	dZu
+ጂ	dZi
+ጃ	dZa
+ጄ	dZe
+ጅ	dZy
 ጆ	Jo
 ገ	g@
 ጉ	gu
@@ -1482,7 +1477,7 @@ _0M3    b'ilon
 ዟ	zwa
 ዧ	Zwa
 ዷ	dwa
-ጇ	Jwa
+ጇ	dZwa
 ጧ	t`wa
 ጯ	tS`wa
 ጿ	tSwa
@@ -1571,6 +1566,10 @@ ___ⶥ	ffwy
 _ⶦ	fwo
 ___ⶦ	ffwo
 
+቉	qwaa
+኉	xwaa
+኱	kwaa
+
 _ⶨ	ky@
 ___ⶨ	kky@
 _ⶩ	kyu
@@ -1649,3 +1648,37 @@ ___ⶖ	ggnwa
 ᎉ	nwi
 ᎊ	nwae
 ᎋ	nwo
+
+ት/ቤት	tymhyrtbet
+ት።ቤት	tymhirtbet
+መ/ቤት	m@sriyabet
+መ።ቤት	m@sriyabet
+ክ/ከተማ	kyfl@k@t@ma
+ወ/ሮ	w@jz@ro
+ወ።ሮ	w@jz@ro
+ወ.ሮ	w@yz@ro
+ወ/ሪት	w@jz@rit
+መ/ርm@myhyr
+ጋ/ኛ	gazet`@n^a
+ዶ/ር	dokyt@r
+ዶ.ር	dokyt@r
+ፕ/ር	pyrofes@r
+ኢ/ር	indZyn@r
+ኢ/ያ	ityjop`iyjaa
+ኢ።ያ	ityyop`yja
+አ/አ	adisy ab@ba
+ድር/ት	dyryjyt
+ማ/ር	mahyb@r
+ባ/ዳር	bahyrdar
+ሊ/ጳ	lik`ep`ap`as
+ቤ/ክ	bet@krystiyan
+ሊ/መንበር	lik`@m@nb@r
+ጽ/ቤት	tsyhyf@t bet
+ዓ.ም	am@t@ myhyr@t
+ዓ/ም	am@t@ myhyr@t
+ዓ።ም	am@t@ myhyr@t
+ዓ.ዓ	am@t@ al@m
+ሃ.ሎ	hajl@ syllase
+ቁ.፲	qut`yr
+ገ.፲	g@ts
+አ.ቁ	anq@ts qut`yr

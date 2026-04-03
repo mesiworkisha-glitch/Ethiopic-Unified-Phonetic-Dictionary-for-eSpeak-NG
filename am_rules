@@ -14,6 +14,11 @@
 ፧	tiyaqe_mlkt
 ፟	paraklitos
 
+// Modern Literary Punctuation
+	«	kyfyt_t`yk`ys
+	»	zyg_t`yk`ys
+¡	ty'ymyrt@_sylak`
+
 .YaredicMusicalSigns
 ᎐	jiz@t
 ᎑	d@r@t
@@ -24,22 +29,16 @@
 ᎗	hid@t
 ᎙	k`urt`
 
-.group
-	ሀ	haletaw
-	ሐ	hameru
-	ኀ	byzuhanu
-	ሠ	nygusu
-	ሰ	esatu
-	ጸ	sehayu
-	ፀ	selotu
-	ዐ	aynu
-	አ	alefaw
 
 // Tigrigna qh Series (Top of file)
 _ቐ	qh@
 ___ቐ	qqh@
 _ቕ	qhy
 @) _ቕ (_ qh
+
+቉	qwaa
+኉	xwaa
+኱	kwaa
 
 // Numbers from Gold Master am_list
 _0	z'ero
@@ -56,17 +55,17 @@ _10	'?assyr
 _12     '?asra'ul@t
 _1X	?asr'a
 _2X	haja
-_3X	sal'asa
+_3X	s@lasa
 _4X	?arba
 _5X	hamsa
-_6X	silsa
+_6X	sydsa
 _7X	s@ba
 _8X	s@m'anja
 _9X	z@t`'@na
 _0C	m'@to
 _0M1	S'ix
-_0M2    m'ilon
-_0M3    b'ilon
+_0M2    m'ilijon
+_0M3    b'ilijon
 
 // Forced Gemination Rules
 _ዸ	D@
@@ -121,6 +120,73 @@ ___ⶀ	mmw@
 _ⶁ	mwu
 ___ⶁ	mmwu
 
+
+// 1. Abbreviations: Allow letters to be followed by punctuation and more letters
+L01 / L01   /
+L01 . L01   .
+L01 ። L01   ።
+
+// 2. Numbers: Transition between letters and Arabic digits (0-9)
+L01 _ D01   _
+D01 _ L01   _
+
+// 3. Ge'ez Numerals: Handle the transition between letters and Ge'ez numbers (፲, ፳, etc.)
+// (Note: You may need to define Ge'ez numbers as a specific group if not already in your phonemes)
+L01 _ ፟   _
+፟ _ L01   _
+
+// 4. Grouping: Prevent the engine from treating a period as a full sentence stop 
+// when it is part of a number or abbreviation (e.g., 1.5 or ዓ.ም)
+D01 . D01   .
+L01 . _     .
+
+// 5. Native Full Stop: Ensure the Ethiopic full stop (።) provides a 
+// clear breath/pause at the end of a sentence
+L01 ። _     ።
+
+// Rule for forward slash / in abbreviations
+// If it has a character before and after, treat as part of a word
+L01 / L01   /
+
+// Rule for Ethiopic Full Stop (።) in abbreviations
+L01 ። L01   ።
+
+// Rule for Dot (.) in abbreviations
+L01 . L01   .
+
+	ት/ቤት	tymhyrtbet
+	ት።ቤት	tymhirtbet
+	መ/ቤት	m@sriyabet
+	መ።ቤት	m@sriyabet
+	ክ/ከተማ	kyfl@k@t@ma
+	ወ/ሮ	w@jz@ro
+	ወ።ሮ	w@jz@ro
+	ወ.ሮ	w@yz@ro
+	ወ/ሪት	w@jz@rit
+	መ/ርm@myhyr
+	ጋ/ኛ	gazet`@n^a
+	ዶ/ር	dokyt@r
+	ዶ.ር	dokyt@r
+	ፕ/ር	pyrofes@r
+	ኢ/ር	indZyn@r
+	ኢ/ያ	ityjop`iyjaa
+	ኢ።ያ	ityyop`yja
+	አ/አ	adisy ab@ba
+	ድር/ት	dyryjyt
+	ማ/ር	mahyb@r
+	ባ/ዳር	bahyrdar
+	ሊ/ጳ	lik`ep`ap`as
+	ቤ/ክ	bet@krystiyan
+	ሊ/መንበር	lik`@m@nb@r
+	ጽ/ቤት	tsyhyf@t bet
+	ዓ.ም	am@t@ myhyr@t
+	ዓ/ም	am@t@ myhyr@t
+	ዓ።ም	am@t@ myhyr@t
+	ዓ.ዓ	am@t@ al@m
+	ሃ.ሎ	hajl@ syllase
+ቁ.፲	qut`yr
+	ገ.፲	g@ts
+	አ.ቁ	anq@ts qut`yr
 
 .group 0xe188		// characters U+1200 to U+123f
 	ሀ	ha
@@ -416,15 +482,15 @@ ___ⶁ	mmwu
 
 
 .group 0xe18c		// U+1300 to U+133F
-	ጀ	J@
-	ጁ	Ju
-	ጂ	Ji
-	ጃ	Ja
-	ጄ	Je
-	ጅ	Jy
-     @) ጅ (_J
-	ጆ	Jo
-	ጇ	Jwa
+	ጀ	dZ@
+	ጁ	dZu
+	ጂ	dZi
+	ጃ	dZa
+	ጄ	dZe
+	ጅ	dZy
+     @) ጅ (_dZ
+	ጆ	dZo
+	ጇ	dZwa
 
 	ገ	g@
 	ጉ	gu
@@ -528,4 +594,6 @@ ___ⶁ	mmwu
 
 .group
 	$	dolar
+
+
 
