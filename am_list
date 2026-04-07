@@ -3,17 +3,25 @@
 //  Amharic Dictionary Source
 //  UTF-8 encoded
 
-፠	arafa
-፡	and
-።	arat
-፣	netela
-፤	dirib
-// Modern Literary Punctuation
-«	kyfyt_t`yk`ys
-»	zyg_t`yk`s
-¡	ty'ymyrt@_sylak`
+// Modern & Classical Ethiopic Punctuation
+፠    ||          // Arafa - Silenced to a pause
+፡    ||          // Hulet-Netib (and) - Silenced to a pause
+።    |||         // Arat-Netib (arat) - Long pause (End of sentence)
+፣    ||          // Netela-Serez (netela) - Short pause (Comma)
+፤    ||          // Dirib-Serez (dirib) - Medium pause (Semicolon)
 
+// Modern Literary Punctuation (Quotes and Symbols)
+«    ||          // Left Quote - Silenced (allows natural flow)
+»    ||          // Right Quote - Silenced
+¡    ||          // Inverted Exclamation - Silenced
 
+// If you prefer to hear SHORTENED versions instead of silence, use these:
+// ፡    'and.
+// ።    'arat.
+// «    k'yf.
+// »    z'yg.
+
+..
 //  2. REGULAR NUMBERS
 _0	z'ero   b'ado ??
 _1	'?and
@@ -38,8 +46,8 @@ _8X	s@m'anja
 _9X	z@t`'@na
 _0C	m'@to
 _0M1	S'ix
-_0M2    m'ilon
-_0M3    b'ilon
+_0M2    milijon
+_0M3    bilijon
 
 
 //  3. GEEZ NUMBERS
@@ -1118,17 +1126,15 @@ _0M3    b'ilon
 ፻፻፻፻፻፻	bilijon
 
 // 4. PUNCTUATION
-፣	n@t`@las@r@z
-፤	dyrybs@r@z
-።	aratn@t`yb
 
-// Extended Punctuation
-፡	hul@tn@t`yb
-፥	amystn@t`yb
-፦	n@g@rnyy@n
-፧	m@lkyt
-፨	parak`litos
-፠	elthe
+// Ethiopic Punctuation Names
+፠    'ar@fa_m@g_y_@
+።    'arat_n@t`yb
+፣    n@t`@la_s@r@z
+፤    dyryb_s@r@z
+፦    p@rak`litos
+«    kyfyt_t`yk`ys
+»    zyg_t`yk`ys
 
 //  5. FIDEL FAMILIES
 ሀ	ha_haletaw_gy'yz
@@ -1480,7 +1486,7 @@ _0M3    b'ilon
 ጇ	dZwa
 ጧ	t`wa
 ጯ	tS`wa
-ጿ	tSwa
+ጿ	tswa
 ፏ	fwa
 
 ዸ	D@
@@ -1625,7 +1631,7 @@ ___ⶖ	ggnwa
 ᎕	k`ynat
 ᎖	tS`yr@t
 ᎗	hid@t
-᎙	k`urt`
+᎙	k`urt`y
 
 //  8. GURAGE LABIALIZED (Bw@)
 ብወ	bw@
@@ -1649,36 +1655,4 @@ ___ⶖ	ggnwa
 ᎊ	nwae
 ᎋ	nwo
 
-ት/ቤት	tymhyrtbet
-ት።ቤት	tymhirtbet
-መ/ቤት	m@sriyabet
-መ።ቤት	m@sriyabet
-ክ/ከተማ	kyfl@k@t@ma
-ወ/ሮ	w@jz@ro
-ወ።ሮ	w@jz@ro
-ወ.ሮ	w@yz@ro
-ወ/ሪት	w@jz@rit
-መ/ርm@myhyr
-ጋ/ኛ	gazet`@n^a
-ዶ/ር	dokyt@r
-ዶ.ር	dokyt@r
-ፕ/ር	pyrofes@r
-ኢ/ር	indZyn@r
-ኢ/ያ	ityjop`iyjaa
-ኢ።ያ	ityyop`yja
-አ/አ	adisy ab@ba
-ድር/ት	dyryjyt
-ማ/ር	mahyb@r
-ባ/ዳር	bahyrdar
-ሊ/ጳ	lik`ep`ap`as
-ቤ/ክ	bet@krystiyan
-ሊ/መንበር	lik`@m@nb@r
-ጽ/ቤት	tsyhyf@t bet
-ዓ.ም	am@t@ myhyr@t
-ዓ/ም	am@t@ myhyr@t
-ዓ።ም	am@t@ myhyr@t
-ዓ.ዓ	am@t@ al@m
-ሃ.ሎ	hajl@ syllase
-ቁ.፲	qut`yr
-ገ.፲	g@ts
-አ.ቁ	anq@ts qut`yr
+

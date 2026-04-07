@@ -554,7 +554,7 @@ endphoneme
 
 phoneme arat_netib
   vcd glt stp
-  length 140
+  length 30
   FMT(stp/p_1)
   // This points to the "Four Dots" name
 endphoneme
@@ -575,12 +575,6 @@ endphoneme
 
 // --- Ethiopic Punctuation ---
 
-phoneme ።  // Ethiopic Full Stop
-  vowel n/a
-  length 300  // Longer pause for end of sentence
-  pause
-end phoneme
-
 phoneme ፣  // Ethiopic Comma
   vowel n/a
   length 150
@@ -593,16 +587,17 @@ phoneme ፤  // Ethiopic Semicolon
   pause
 end phoneme
 
-phoneme ፦  // Ethiopic Preface (Colon)
-  vowel n/a
-  length 100
-end phoneme
+phoneme ፡
+  vcl stop
+  pause
+  length 40  // Short separator pause
+endphoneme
 
 // --- Standard/Western Punctuation ---
 
 phoneme .  // Period
   vowel n/a
-  length 300
+  length 20
   pause
 end phoneme
 
@@ -672,4 +667,9 @@ phoneme ¡
   type  punctuation
   intonation raise // Sarcasm/Irony often uses a rising pitch
   pause 40
+endphoneme
+
+phoneme ፡
+  vcl stop
+  pause
 endphoneme
